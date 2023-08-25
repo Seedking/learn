@@ -18,7 +18,7 @@ struct TreeNode *genTree(int *array, int tree_size) {
 
 }
 
-
+//64ms 37.4mb
 int spider (struct TreeNode * node, int max) {
     int ret ,max_now;
     if (node->val >= max) {
