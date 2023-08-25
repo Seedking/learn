@@ -10,15 +10,14 @@ struct TreeNode {
     struct TreeNode *right;
 };
 
-struct TreeNode * gen (int * array, int array_size) {
-    struct TreeNode * ret = malloc(sizeof (struct TreeNode));
-    struct TreeNode *
-    for (int i = 0; i <= array_size; ++i) {
-        
-    }
+struct TreeNode *genNode(int val) {
 
-    return ret;
 }
+
+struct TreeNode *genTree(int *array, int tree_size) {
+
+}
+
 
 int spider (struct TreeNode * node, int max) {
     int ret ,max_now;
@@ -35,12 +34,13 @@ int spider (struct TreeNode * node, int max) {
 }
 
 int goodNodes(struct TreeNode* root){
-
+    int ret = spider(root, root->val);
+    return ret;
 }
 
 int main() {
     int array[] = {3,1,4,3,0,1,5};
     int * p_array = array;
-    struct TreeNode * tree = gen(p_array, 6);
+    struct TreeNode * tree;
     return 0;
 }
