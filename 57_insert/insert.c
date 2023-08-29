@@ -17,6 +17,32 @@ int** insert(int** intervals, int intervalsSize, int* intervalsColSize, int* new
         (*returnColumnSizes)[*returnSize] = 2;
         *returnSize +=1;
         return ret;
+    } else if (intervalsSize == 1){
+        if (intervals[0][1] < newInterval[0]) {
+            ret[*returnSize] = intervals[0];
+            (*returnColumnSizes)[*returnSize] = 2;
+            *returnSize += 1;
+            ret[*returnSize] = newInterval;
+            (*returnColumnSizes)[*returnSize] = 2;
+            *returnSize += 1;
+        } else if(newInterval[1] < intervals[0][0]) {
+            ret[*returnSize] = newInterval;
+            (*returnColumnSizes)[*returnSize] = 2;
+            *returnSize += 1;
+            ret[*returnSize] = intervals[0];
+            (*returnColumnSizes)[*returnSize] = 2;
+            *returnSize += 1;
+        } else {
+            int l,h;
+            l = (intervals[0][0] > newInterval[0]) ? newInterval[0] : intervals[0][0];
+            h = (intervals[0][1] > newInterval[1]) ? intervals[0][1] : newInterval[1];
+            ret[*returnSize] = (int *)malloc(sizeof (int )*2);
+            ret[*returnSize][0] = l;
+            ret[*returnSize][1] = h;
+            (*returnColumnSizes)[*returnSize] = 2;
+            *returnSize += 1;
+        }
+        return ret;
     }
     bool low_b = true , high_b = true;
     int low_i, high_i;
@@ -63,15 +89,17 @@ int main () {
             {6,9},
     };
     int ** pp = malloc(sizeof (int*)*5);
-
+    pp[0] = (int *)malloc(sizeof (int)*2);
+    pp[0][0]=1;
+    pp[0][1]=5;
     int ics[] = {2,2,2,2};
     int ni[] = {4,8};
-    int ni2[] = {2,5};
+    int ni2[] = {2,3};
     int nis = 2;
     int *rs = malloc(sizeof (int ));
     int **  rcs = malloc(sizeof (int *)*10);
 
-    int **rt = insert(pp,0,ics,ni2,2, rs, rcs);
+    int **rt = insert(pp,1,ics,ni2,2, rs, rcs);
 
     for (int i = 0; i < *rs; ++i) {
         printf("%d,%d\n",rt[i][0],rt[i][1]);
