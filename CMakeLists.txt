@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(1_twoSum)
 add_subdirectory(2_addTwoNumbers)
+add_subdirectory(3_lengthOfLongestSubstring)
 add_subdirectory(9_isPalindrome)
 add_subdirectory(12_intToRoman)
 add_subdirectory(13_romanToInt)
