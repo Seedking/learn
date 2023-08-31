@@ -8,6 +8,7 @@ using namespace std;
 
 class Solution {
 public:
+    //0ms 8.5mb
     int removeElement(vector<int>& nums, int val) {
         if (nums.size() == 1) {
             if (nums[0] == val) {
