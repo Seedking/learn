@@ -9,6 +9,7 @@ using namespace std;
 
 class Solution {
 public:
+    //0ms 6.2mb
     int strStr(string haystack, string needle) {
         int low = 0,high = 0;
         bool rs = false;
