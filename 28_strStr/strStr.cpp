@@ -10,27 +10,24 @@ using namespace std;
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        int ret = 0;
-        int high = 0, size = needle.size();
-        bool s = false;
-        while (high < haystack.size()) {
-            if (haystack[high] == needle[0]) {
-                ret = high;
-                for (int i = 0; i < size; ++i) {
-                    if (haystack[high] == needle[i]) {
-                        if (i == size - 1) s = true;
-                        high++;
-                    } else {
-                        break;
-                    }
-                }
+        int low = 0,high = 0;
+        bool rs = false;
+        while(low < haystack.size()) {
+            if (haystack[low] != needle[0]) {
+                low++;
             } else {
-                high++;
+                high = low;
+                for (int i = 0; i < needle.size(); ++i) {
+                    if (high >= haystack.size() || haystack[high] != needle[i]) break;
+                    if (i == needle.size()-1) rs = true;
+                    high++;
+                }
+                if (rs) break;
+                low++;
             }
-            if (s) break;
         }
-        if (s){
-            return ret;
+        if (rs) {
+            return low;
         } else {
             return -1;
         }
@@ -38,8 +35,8 @@ public:
 };
 
 int main() {
-    string hay = "mississippi";
-    string needle = "issip";
+    string hay = "leetcode";
+    string needle = "leeto";
     Solution s = *new Solution;
     printf("%d", s.strStr(hay, needle));
     return 0;
