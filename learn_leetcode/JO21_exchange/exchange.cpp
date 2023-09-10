@@ -14,14 +14,13 @@ public:
         return ret;
     }
     //24ms 17mb
-    struct  {
-        bool operator() (int a, int b) const {
-            return a%2 > b%2;
-        }
-    } s;
+    static bool co (int a , int b) {
+        return a%2 > b%2;
+    }
+
     vector<int> exchange2(vector<int>& nums) {
         int size = nums.size();
-        std::sort(nums.begin(), nums.end(),s);
+        std::sort(nums.begin(), nums.end(),co);
         return nums;
     }
 };
