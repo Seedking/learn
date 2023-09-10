@@ -27,7 +27,6 @@ public:
                 if (di > ret) ret = di;
             }
         }
-
         return ret;
     }
 };
