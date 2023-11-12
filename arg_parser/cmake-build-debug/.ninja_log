@@ -1,0 +1,9 @@
+# ninja log v5
+0	1151	7208753411532425	src/CMakeFiles/arg_parser_lib.dir/arg_parser.cpp.obj	af6294c14342462d
+885	1086	7212498318895705	test/apstr_test.exe	dbdcaed4f9986c65
+1154	1494	7208753414970373	src/libarg_parser_lib.a	3b7f645f0276d135
+5	1170	7213882157150767	test/CMakeFiles/util_test.dir/util_test.cpp.obj	f49cf246a1c8e1c7
+4	885	7212498316924023	test/CMakeFiles/apstr_test.dir/apstr_test.cpp.obj	5ca299c02a2c7b42
+1171	1347	7213882158897257	test/util_test.exe	5c9bd09ad8233
+5	975	7212277174909447	test/CMakeFiles/type_test.dir/type_test.cpp.obj	331d6f151bc2fe90
+975	1131	7212277176420744	test/type_test.exe	a26ab75b19161e30
