@@ -1,0 +1,8 @@
+{
+  "name" : "calculator",
+  "dependencies" : [ {
+    "name" : "sdl2"
+  }, {
+    "name" : "boost-multiprecision"
+  } ]
+}
