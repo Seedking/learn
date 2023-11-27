@@ -1,4 +1,4 @@
 cmake-build-debug
 cmake-build-debug-mingw-clang
 cmake-build-debug-mingw-llvm-msvcrt
-leetcode
+.idea
