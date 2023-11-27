@@ -5,6 +5,11 @@
 #ifndef LEETCODE_HPP
 #define LEETCODE_HPP
 #include <iostream>
+#include <vector>
+#include <stack>
+#include <string>
+#include <algorithm>
+using namespace std;
 struct ListNode {
     int val;
     ListNode *next;
