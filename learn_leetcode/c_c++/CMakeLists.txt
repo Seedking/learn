@@ -4,4 +4,4 @@ project(learn_leetcode)
 set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 17)
 
-add_subdirectory(144_preorderTraversal)
+add_executable(maxDepth 104_maxDepth/maxDepth.cpp)
