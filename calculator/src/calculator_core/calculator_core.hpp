@@ -42,7 +42,7 @@ namespace cc {
 
         ErrorInfo check_expression_number(std::string &expression);
 
-        ErrorInfo check_operator_list(std::string &expression);
+        ErrorInfo check_operator_list();
 
         void calculating();
 

@@ -1,7 +1,4 @@
 cmake_minimum_required(VERSION 3.26)
 project(learn_leetcode)
 
-set(CMAKE_C_STANDARD 99)
-set(CMAKE_CXX_STANDARD 17)
-
-add_executable(maxDepth 104_maxDepth/maxDepth.cpp)
+add_executable(minDepth 111_minDepth/minDepth.cpp)
